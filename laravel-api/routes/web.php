@@ -11,8 +11,9 @@
 |
 */
 
-Route::get('/','ProjectsController@create');
+// Route::get('/','ProjectsController@create');
 Route::post('/project','ProjectsController@store');
+Route::resource('/products','ProductsController');
 
 Route::get('/skills', function ()
 {
