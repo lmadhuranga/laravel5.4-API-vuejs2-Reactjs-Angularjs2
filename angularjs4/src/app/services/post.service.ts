@@ -8,6 +8,7 @@ export class PostService {
     constructor(private http:Http){
         this.postUrl = 'http://localhost:3000/posts';
     }
+    
     getPosts() : Observable<Comment[]> {
 
         // ...using get request
