@@ -16,7 +16,7 @@ Route::post('/project','ProjectsController@store');
 
 Route::get('/skills', function ()
 {
-	return ['Laravel', 'Vuejs', 'PHP', 'Javascript'];
+	return ['Laravel1', 'Vuejs', 'PHP', 'Javascript'];
 });
 Auth::routes();
 

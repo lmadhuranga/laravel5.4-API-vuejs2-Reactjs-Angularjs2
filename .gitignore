@@ -1,2 +1,10 @@
 laravel-api/vendor/
 vuejs/node_modules/
+laravel-api/.idea/
+phpmyadmin/
+laravel-api/node_modules/
+laravel-api/.env
+laravel-api/npm-debug.log
+laravel-api/public/
+laravel-api/web/
+laravel-api/storage/framework/sessions/
