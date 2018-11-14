@@ -1,0 +1,45 @@
+<p>
+  post works!
+</p>
+<button (click)=displayAddForm($event)>Add</button> 
+<ul *ngFor="let post of postsList">
+  <li>{{post.id}} | {{post.title}} 
+    <button (click)=displayEditPost(post)>E</button>
+    <button (click)=deletePost(post)>x</button>
+  </li>
+</ul>
+<div>
+  <h1>hi</h1> 
+</div>
+<form *ngIf="editForm" (submit)=updatePost(post) >
+  <h2>{{post.title}}</h2>
+  <div class="section">
+    <label for="title"></label>
+    <input type="text" title="Title" [(ngModel)]="post.title" name="post.title">
+  </div>
+  <div class="section">
+    <label for="author"></label>
+    <input type="text" title="Author" [(ngModel)]="post.author" name="post.author">
+  </div>
+  <div>
+    <button type="submit">save</button>
+    <button (click)=cancelEdit()>clear</button>
+  </div>
+</form>
+
+<form *ngIf="addForm" (submit)=addPost(post) >
+  <h2>New Post</h2>
+  <div class="section">
+    <label for="title"></label>
+    <input type="text" title="Title" [(ngModel)]="post.title" name="post.title">
+  </div>
+  <div class="section">
+    <label for="author"></label>
+    <input type="text" title="Author" [(ngModel)]="post.author" name="post.author">
+  </div>
+  <div>
+    <button type="submit">Add</button>
+    <button (click)=cancelAdd()>clear</button>
+  </div>
+</form>
+  
